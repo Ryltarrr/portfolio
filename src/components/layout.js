@@ -1,6 +1,5 @@
 import React from "react"
 import { Link } from "gatsby"
-import useDarkMode from "use-dark-mode"
 
 import "../styles/layout.scss"
 
@@ -8,8 +7,6 @@ import { rhythm, scale } from "../utils/typography"
 import DarkModeToggle from "./DarkModeToggle"
 
 const Layout = ({ location, title, children }) => {
-  const darkMode = useDarkMode(false)
-
   const rootPath = `${__PATH_PREFIX__}/`
   let header
 

@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
 
@@ -9,7 +9,7 @@ const About = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="About me" />
-      <h1>About me</h1>
+      <p>Nothing there at the moment</p>
     </Layout>
   )
 }
