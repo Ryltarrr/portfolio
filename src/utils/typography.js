@@ -11,7 +11,7 @@ import Doelger from "typography-theme-doelger"
 
 // delete Doelger.googleFonts
 
-const typography = new Typography(Doelger)
+const typography = new Typography()
 
 // Hot reload typography in development.
 if (process.env.NODE_ENV !== `production`) {

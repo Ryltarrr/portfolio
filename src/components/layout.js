@@ -1,9 +1,15 @@
 import React from "react"
 import { Link } from "gatsby"
+import useDarkMode from "use-dark-mode"
+
+import "../styles/layout.scss"
 
 import { rhythm, scale } from "../utils/typography"
+import DarkModeToggle from "./DarkModeToggle"
 
 const Layout = ({ location, title, children }) => {
+  const darkMode = useDarkMode(false)
+
   const rootPath = `${__PATH_PREFIX__}/`
   let header
 
@@ -56,7 +62,10 @@ const Layout = ({ location, title, children }) => {
         padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
       }}
     >
-      <header>{header}</header>
+      <header>
+        {header}
+        <DarkModeToggle />
+      </header>
       <main>{children}</main>
       <footer>
         © {new Date().getFullYear()}, Built with
