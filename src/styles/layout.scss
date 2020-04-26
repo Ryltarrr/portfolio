@@ -1,24 +1,38 @@
+$light-bg: #fffffe;
+$dark-bg: #16161a;
+$primary: #7f5af0;
+$light-text: #94a1b2;
+$tertiary: #2cb67d;
+$secondary: #72757e;
+
 html,
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 body.light-mode {
-  background-color: #fff;
-  color: #333;
+  background-color: $light-bg;
+  color: $secondary;
   transition: background-color 0.3s ease;
+
+  a {
+    color: $tertiary;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $primary;
+  }
 }
 
 body.dark-mode {
-  background-color: #10171d;
-  color: #dfdfdf;
-
-  .navbar {
-    background-color: #1b2938;
-  }
+  background-color: $dark-bg;
+  color: $light-bg;
 
   .dark-mode-toggle > button {
     color: #999;
@@ -26,65 +40,19 @@ body.dark-mode {
       color: lightblue;
     }
   }
-}
 
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  display: flex;
-  background-color: #95d3ff;
-  padding: 20px;
-}
-
-.content {
-  padding: 20px;
-  margin: 0 auto;
-  margin-top: 60px;
-  max-width: 600px;
-  font-size: 20px;
-  line-height: 1.3em;
-
-  h1 {
-    font-size: 2rem;
-    color: red;
-  }
-
-  img {
-    width: 100%;
-  }
-
-  code {
-    background-color: #cbe9ff;
-    border-radius: 2px;
-    font-size: 1em;
-    padding: 0 5px;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $primary;
   }
 
   a {
-    text-decoration: none;
-    color: #006688;
+    color: $tertiary;
   }
-
-  button {
-    color: #006688;
-    background-color: transparent;
-    border: none;
-    font-size: 1em;
-    padding: 0;
-  }
-}
-
-body.dark-mode .content code {
-  background-color: #1b2938;
-}
-
-body.dark-mode .content a {
-  color: #ee09;
-}
-
-body.dark-mode .content button {
-  color: #ee09;
 }
 
 .dark-mode-toggle {
